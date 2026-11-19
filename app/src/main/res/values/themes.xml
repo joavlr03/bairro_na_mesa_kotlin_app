@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fundo creme já na abertura, para não piscar branco antes do Compose desenhar -->
+    <style name="Theme.BairroNaMesa" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/creme100</item>
+    </style>
+    <color name="creme100">#FBF5EA</color>
+    <color name="verde_mata">#173D28</color>
+    <color name="milho">#F2B630</color>
+</resources>

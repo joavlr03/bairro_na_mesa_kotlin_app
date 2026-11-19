@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Nova oferta – erros de validação</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#246640}a:hover{color:#173D28}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF5EA; color: #1E2B23; font-family: 'Atkinson Hyperlegible', Verdana, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+  <header style="height: 64px; flex: none; display: flex; align-items: center; gap: 4px; padding: 0 8px; border-bottom: 1px solid #E2D7C4">
+    <a href="Ofertas.dc.html" aria-label="Voltar" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; color: #1E2B23; border-radius: 999px">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </a>
+    <h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; line-height: 28px; font-weight: 700">Nova oferta</h1>
+  </header>
+
+  <form style="flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="produto" style="font-size: 16px; font-weight: 700">Produto</label>
+      <input id="produto" value="" aria-invalid="true" style="height: 52px; box-sizing: border-box; border: 2px solid #B42318; border-radius: 8px; padding: 0 14px; background: #FFFFFF; font: inherit; font-size: 17px; color: #1E2B23">
+      <p style="margin: 0; font-size: 14px; color: #B42318; display: flex; align-items: center; gap: 6px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Informe o nome do produto
+      </p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="categoria" style="font-size: 16px; font-weight: 700">Categoria</label>
+      <button id="categoria" type="button" aria-haspopup="listbox" aria-invalid="true" style="height: 52px; box-sizing: border-box; border: 2px solid #B42318; border-radius: 8px; padding: 0 10px 0 14px; background: #FFFFFF; font: inherit; font-size: 17px; color: #5C665F; display: flex; align-items: center; justify-content: space-between; text-align: left">
+        Escolha
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E2B23" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <p style="margin: 0; font-size: 14px; color: #B42318; display: flex; align-items: center; gap: 6px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Escolha uma categoria
+      </p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="kg" style="font-size: 16px; font-weight: 700">Quantidade (kg)</label>
+      <input id="kg" inputmode="decimal" value="0" aria-invalid="true" style="height: 52px; box-sizing: border-box; border: 2px solid #B42318; border-radius: 8px; padding: 0 14px; background: #FFFFFF; font: inherit; font-size: 17px; color: #1E2B23">
+      <p style="margin: 0; font-size: 14px; color: #B42318; display: flex; align-items: center; gap: 6px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Informe uma quantidade maior que zero
+      </p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="preco" style="font-size: 16px; font-weight: 700">Preço por kg (R$)</label>
+      <input id="preco" inputmode="decimal" value="4,00" style="height: 52px; box-sizing: border-box; border: 1px solid #8A8F84; border-radius: 8px; padding: 0 14px; background: #FFFFFF; font: inherit; font-size: 17px; color: #1E2B23">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="feira" style="font-size: 16px; font-weight: 700">Feira</label>
+      <button id="feira" type="button" aria-haspopup="listbox" style="height: 52px; box-sizing: border-box; border: 1px solid #8A8F84; border-radius: 8px; padding: 0 10px 0 14px; background: #FFFFFF; font: inherit; font-size: 17px; color: #1E2B23; display: flex; align-items: center; justify-content: space-between; text-align: left">
+        Praça São Mateus · Sábado
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+
+    <button type="button" style="margin-top: auto; height: 52px; border-radius: 999px; border: none; background: #2F7D4F; color: #FBF5EA; font: inherit; font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-9"/></svg>
+      Salvar oferta
+    </button>
+  </form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
