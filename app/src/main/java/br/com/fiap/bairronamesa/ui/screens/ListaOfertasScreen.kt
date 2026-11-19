@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -68,6 +69,10 @@ fun ListaOfertasScreen(vm: OfertaViewModel, onVoltar: () -> Unit, onNova: () -> 
 
     LaunchedEffect(Unit) { vm.eventos.collect { snackbar.showSnackbar(it) } }
 
+    // A oferta nova entra no topo; sem isto a lista mantém a rolagem e ela fica escondida acima
+    val rolagem = rememberLazyListState()
+    LaunchedEffect(ofertas?.firstOrNull()?.id) { rolagem.scrollToItem(0) }
+
     Scaffold(
         topBar = { TopBarVoltar("Minhas ofertas", onVoltar) },
         snackbarHost = { SnackbarHost(snackbar) },
@@ -93,6 +98,7 @@ fun ListaOfertasScreen(vm: OfertaViewModel, onVoltar: () -> Unit, onNova: () -> 
                     modifier = Modifier.fillMaxSize()
                 )
                 else -> LazyColumn(
+                    state = rolagem,
                     contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 96.dp),
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {

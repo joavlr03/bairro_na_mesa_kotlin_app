@@ -59,8 +59,9 @@ private fun CampoBase(rotulo: String, erro: String?, modifier: Modifier, campo: 
         Text(rotulo, style = Rotulo)
         campo()
         if (erro != null) {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                Icon(Icons.Rounded.ErrorOutline, contentDescription = null, tint = Erro, modifier = Modifier.size(16.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                // Ícone alinhado à 1ª linha quando a mensagem quebra
+                Icon(Icons.Rounded.ErrorOutline, contentDescription = null, tint = Erro, modifier = Modifier.padding(top = 2.dp).size(16.dp))
                 Text(erro, style = Legenda, color = Erro)
             }
         }

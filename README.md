@@ -134,7 +134,15 @@ Os prints ficam em `docs\prints\` (roteiro da seção 11 de `docs\PLANO.md`):
 
 O app é fechado pelo **multitarefa** (arrastar para cima), e não só pelo "voltar", porque isso encerra o processo. Assim o print prova que o dado veio do Room, e não da memória.
 
-<!-- Depois de tirar os prints, inclua-os aqui, por exemplo: ![Início](docs/prints/01-inicio.png) -->
+> Os prints de `01` a `10` foram gerados executando o app (MainActivity, Room e ViewModel reais) no **Robolectric**, um Android simulado na JVM, numa tela de 390 × 844 dp. Por isso não aparece a barra de status, e o diálogo de exclusão sai sem o fundo escurecido. O print `09-reaberto.png` (persistência) precisa ser feito no emulador, porque exige fechar o app pelo multitarefa.
+
+| Início | Lista | Validação |
+|---|---|---|
+| ![Início](docs/prints/01-inicio.png) | ![Lista](docs/prints/02-lista.png) | ![Validação](docs/prints/03-validacao.png) |
+| **Cadastro** | **Oferta criada** | **Status atualizado** |
+| ![Cadastro](docs/prints/04-cadastro.png) | ![Criada](docs/prints/05-criada.png) | ![Status](docs/prints/06-status.png) |
+| **Lista de separação** | **Excluir** | **Filtro vazio** |
+| ![Separação](docs/prints/07-separacao.png) | ![Excluir](docs/prints/08-excluir.png) | ![Vazio](docs/prints/10-vazio.png) |
 
 ## Limitações (protótipo acadêmico)
 
