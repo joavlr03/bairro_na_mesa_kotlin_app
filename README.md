@@ -12,9 +12,8 @@ App Android (Kotlin + Jetpack Compose) da disciplina *Android Kotlin Developer* 
 
 | Nome completo | RM |
 |---|---|
-| [PREENCHER] | [PREENCHER] |
-| [PREENCHER] | [PREENCHER] |
-| [PREENCHER] | [PREENCHER] |
+| João Victor Oliveira Avellar| 550283 |
+
 
 ## Problema e público beneficiado
 
@@ -144,11 +143,7 @@ O app é fechado pelo **multitarefa** (arrastar para cima), e não só pelo "vol
 | **Lista de separação** | **Excluir** | **Filtro vazio** |
 | ![Separação](docs/prints/07-separacao.png) | ![Excluir](docs/prints/08-excluir.png) | ![Vazio](docs/prints/10-vazio.png) |
 
-## Limitações (protótipo acadêmico)
 
-- Os dados são simulados e ficam só no aparelho. Não há login nem backend.
-- Não há integração com a API, com o app Flutter do morador nem com serviços públicos.
-- As reservas são marcadas pelo próprio produtor, o que simula o pedido feito pelo morador.
 
 ## Roadmap
 
